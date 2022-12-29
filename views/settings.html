@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <title>Settings</title>
+    <script src="../public/js/settings.js"></script>
+    <script src="https://kit.fontawesome.com/972ea9599a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="" class="header__logo">InterBlog</a>
+                <div class="account">
+                    <div class="account__avatar-container">
+                        <img class="account__avatar" src="../public/img/user.png" alt="">
+                    </div>
+                    <p class="account__name">Имя</p>
+                    <i class="account__arrow fa-solid fa-chevron-down"></i>
+                    <a href="./authorization.html" class="account__popup">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Выйти</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <header class="header-mobile">
+            <div class="header__container header-mobile__container">
+                <a href="" class="header__logo">InterBlog</a>
+                <div class="header-mobile__account-searchBtn">
+                    <div class="account account-mobile">
+                        <div class="account__avatar-container account__avatar--mobile">
+                            <img class="account__avatar" src="../public/img/user.png" alt="">
+                        </div>
+                        <i class="account__arrow fa-solid fa-chevron-down"></i>
+                        <a href="./authorization.html" class="account__popup account__popup-mobile">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Выйти</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <nav class="navbar">
+            <div class="navbar__item navbar__item--menu"><i class="menu-btn fa-solid fa-bars"></i></div>
+            <a href="index.html" class="navbar__item"><i class="fa-solid fa-house"></i><p class="navbar__text-link">Главная</p></a>
+            <a href="profile.html" class="navbar__item"><i class="fa-solid fa-user"></i><p class="navbar__text-link">Профиль</p></a>
+            <a href="settings.html" class="navbar__item navbar__item--active"><i class="fa-solid fa-gear"></i><p class="navbar__text-link">Настройки</p></a>
+            <a href="messenger.html" class="navbar__item"><i class="fa-solid fa-comments"></i><p class="navbar__text-link">Сообщения</p></a>
+        </nav>
+        <nav class="navbar-mobile">
+            <div class="navbar-mobile__container">
+            <a href="index.html" class="navbar-mobile__item"><i class="fa-solid fa-house"></i><p class="navbar-mobile__text-link">Главная</p></a>
+            <a href="profile.html" class="navbar-mobile__item"><i class="fa-solid fa-user"></i><p class="navbar-mobile__text-link">Профиль</p></a>
+            <a href="settings.html" class="navbar-mobile__item navbar-mobile__item--active"><i class="fa-solid fa-gear"></i><p class="navbar-mobile__text-link">Настройки</p></a>
+            <a href="messenger.html" class="navbar-mobile__item"><i class="fa-solid fa-comments"></i><p class="navbar-mobile__text-link">Сообщения</p></a>
+            </div>
+        </nav>
+
+        <aside class="nav-side">
+            <div class="nav-side__item"><i class="fa-solid fa-user"></i>Аккаунт</div>
+            <div class="nav-side__item"><i class="fa-solid fa-palette"></i>Внешний вид</div>
+            <div class="nav-side__item"><i class="fa-regular fa-hand"></i>Приватность</div>
+            <div class="nav-side__item"><i class="fa-solid fa-headset"></i>Помощь</div>
+        </aside>
+
+
+
+        <!-- попап изменить пароль -->
+        <div class="popup-container popup-container--password">
+            <div class="popup popup-password">
+                <header class="popup__header">
+                    <h4 class="popup__title">Поменять пароль</h4>
+                    <div class="popup__close-btn  close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </header>
+                <form class="popup__content popup-password__content form-password-settings">
+                    <label for="password-settings">Введите старый пароль</label>
+                    <input id="password-settings" type="password">
+                    <p class="popup-password__error"></p>
+                    <button type="submit">Подтвердить</button>
+                </form>
+
+                <form class="popup__content popup-password__content form-new-password-settings popup-password--hidden">
+                    <label for="new-password-settings">Введите новый пароль</label>
+                    <input id="new-password-settings" type="password">
+                    <p class="popup-new-password__error"></p>
+                    <button type="submit">Подтвердить</button>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- попап удалить аккаунт -->
+
+        <div class="popup-container popup-container--delete-account">
+            <div class="popup popup-delete-account">
+                <header class="popup__header">
+                    <h4 class="popup__title">Удалить аккаунт</h4>
+                    <div class="popup__close-btn  close-btn">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </header>
+                <div class="popup__content popup-delete-account__content">
+                    <p class="popup-delete-account__warning">Вы точно хотите удалить этот аккаунт? Аккаунт будет <b>безвозвратно удален</b>
+                    </p>
+                    <a class="popup-delete-account__link" href="./authorization.html">Удалить аккаунт</a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <main class="main">
+            <div class="main__container main__container--settings">
+
+
+                <section class="section-settings">
+                    <h4 class="section-settings__title"><i class="fa-solid fa-user"></i>Аккаунт</h4>
+                    <div class="section-settings__container section-content">
+
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-signature"></i>Поменять имя</p>
+                            <form method="post" action="" class="input-text-settings">
+                                <div class="input-text-settings__item">
+                                    <label for="name">Введите имя</label>
+                                    <input type="text" value="Admin" id="name">
+                                    <button class="input-text-settings__button" type="submit">Применить</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-lock"></i>Поменять пароль</p>
+                                <span class="section-content__text popup-activator" id="popup-password">Я хочу поменять пароль</span>
+                        </div>
+
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-circle-info"></i>Поменять информацию о себе</p>
+                            <form class="textarea-settings" action="">
+                                <label for="textarea-settings">Введите текст</label>
+                                <textarea name="" id="textarea-settings">Пейте без остановки напитки черноголовки</textarea>
+                                <button type="submit">Применить</button>
+                            </form>
+                        </div>
+
+                        
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-circle-user"></i>Поменять аватар</p>
+                            <div class="input-file-settings">
+                                    <label for="input-file-avatar-settings">Выбрать изображение</label>
+                                    <input accept="image/jpg, image/jpeg, image/png, image/gif, image/webp" id="input-file-avatar-settings" type="file">
+
+                                <div class="input-file-settings__item content-img-settings">
+                                    <div class="content-img-settings__img">
+                                        <img class="input-avatar-settings" src="../public/img/user.png" alt="">
+                                    </div>
+                                    <div class="content-img-settings__info">
+                                        <p class="content-img-settings__img-name input-avatar-filename-settings">User.png</p>
+                                        <p class="content-img-settings__img-size input-avatar-filesize-settings">45 kb</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-regular fa-image"></i>Поменять задний фон</p>
+                            <div class="input-file-settings">
+                                    <label for="input-file-background-settings">Выбрать изображение</label>
+                                    <input id="input-file-background-settings" type="file">
+
+                                <div class="input-file-settings__item content-img-settings">
+                                    <div class="content-img-settings__img">
+                                        <img class="input-file-background-settings" src="../public/img/photo-width-4.jfif" alt="">
+                                    </div>
+                                    <div class="content-img-settings__info">
+                                        <p class="content-img-settings__img-name input-file-backgroundName-settings"> background.jpg</p>
+                                        <p class="content-img-settings__img-size input-file-backgroundSize-settings">76 kb</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-arrow-right-from-bracket"></i>Выйти из аккаунта</p>
+                                <span class="section-content__text" id=""><a href="./authorization.html">Я хочу выйти из аккаунта</a></span>
+                        </div>
+
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-user-slash"></i>Удалить аккаунт</p>
+                                <span class="section-content__text section-content__text--delete popup-activator" id="popup-delete-account">Я хочу удалить аккаунт</span>
+                        </div>
+
+
+                    </div>
+                </section>
+
+                <section class="section-settings">
+                    <h4 class="section-settings__title"><i class="fa-solid fa-palette"></i>Внешний вид</h4>
+                    <div class="section-settings__container section-content">
+
+
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-paintbrush"></i>Поменять цвет</p>
+                            <div class="color-settings">
+                                <div class="color-settings__item" style="background-color: rgb(5,57,107);"></div>
+                                <div class="color-settings__item" style="background-color: rgb(56,149,131);"></div>
+                                <div class="color-settings__item" style="background-color: rgba(92,219,148);"></div>
+                                <div class="color-settings__item" style="background-color: rgb(26,0,97);"></div>
+                                <div class="color-settings__item" style="background-color: rgba(35,0,144);"></div>
+                                <div class="color-settings__item color-settings__item--active" style="background-color: rgba(19,131,212);"></div>
+                                <div class="color-settings__item" style="background-color: rgb(207,0,0);"></div>
+                                <div class="color-settings__item" style="background-color: rgba(230,0,29);"></div>
+                                <div class="color-settings__item" style="background-color: rgba(255,0,0);"></div>
+                                <div class="color-settings__item" style="background-color: rgb(113,0,207);"></div>
+                                <div class="color-settings__item" style="background-color: rgba(139,0,255);"></div>
+                                <div class="color-settings__item" style="background-color: rgba(164,54,255);"></div>
+                                <div class="color-settings__item" style="background-color: rgb(41,41,41);"></div>
+                                <div class="color-settings__item" style="background-color: rgba(56,56,56);"></div>
+                                <div class="color-settings__item" style="background-color: rgba(76,76,76);"></div>
+                            </div>
+                            <div class="create-color">
+                                <label for="create-color"><i class="fa-solid fa-palette"></i>Добавить цвет</label>
+                                <input type="color" name="" id="create-color">
+                            </div>
+                        </div>
+
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-fill"></i>Цветовая тема</p>
+                            <form id="group-color" name="form-theme-color" class="fieldset">
+                                <input value="0" type="radio" name="group-color" id="group-color-radio-1">
+                                <label for="group-color-radio-1">Светлая</label>
+
+                                <input value="1" type="radio" name="group-color" id="group-color-radio-2">
+                                <label for="group-color-radio-2">Тёмная</label>
+
+
+                            </form>
+                        </div>
+
+
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-font"></i>Размер шрифта</p>
+                            <div class="range-settings">
+                                <span class="range-settings__start">A</span>
+                                <span class="range-settings__center">A</span>
+                                <span class="range-settings__end">A</span>
+                                <input class="range-settings__input" type="range" value="15" max="25" min="10" name="" id="range">
+                            </div>
+                        </div>
+
+                
+
+
+                    </div>
+                </section>
+
+                <section class="section-settings">
+                    <h4 class="section-settings__title"><i class="fa-regular fa-hand"></i>Приватность</h4>
+                    <div class="section-settings__container section-content">
+                        
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-table-list"></i>Кто может смотреть мои посты</p>
+                            <fieldset id="group" class="fieldset">
+                                <input checked type="radio" name="group" id="group-radio-1">
+                                <label for="group-radio-1">Все пользователи</label>
+
+                                <input type="radio" name="group" id="group-radio-2">
+                                <label for="group-radio-2">Я и мои друзья</label>
+
+                                <input type="radio" name="group" id="group-radio-3">
+                                <label for="group-radio-3">Только я</label>
+                            </fieldset>
+                        </div>
+
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-user-group"></i>Кто может смотреть мой список друзей</p>
+                            <fieldset id="group-2" class="fieldset">
+                                <input checked type="radio" name="group-2" id="group-2-radio-1">
+                                <label for="group-2-radio-1">Все пользователи</label>
+
+                                <input type="radio" name="group-2" id="group-2-radio-2">
+                                <label for="group-2-radio-2">Я и мои друзья</label>
+
+                                <input type="radio" name="group-2" id="group-2-radio-3">
+                                <label for="group-2-radio-3">олько я</label>
+                            </fieldset>
+                        </div>
+
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-images"></i>Кто может смотреть мои фотографии</p>
+                            <fieldset id="group-3" class="fieldset">
+                                <input checked type="radio" name="group-3" id="group-3-radio-1">
+                                <label for="group-3-radio-1">Все пользователи</label>
+
+                                <input type="radio" name="group-3" id="group-3-radio-2">
+                                <label for="group-3-radio-2">Я и мои друзья</label>
+
+                                <input type="radio" name="group-3" id="group-3-radio-3">
+                                <label for="group-3-radio-3">Только я</label>
+                            </fieldset>
+                        </div>
+
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-bookmark"></i>Кто может смотреть мои сохранённые</p>
+                            <fieldset id="group-4" class="fieldset">
+                                <input checked type="radio" name="group-4" id="group-4-radio-1">
+                                <label for="group-4-radio-1">Все пользователи</label>
+
+                                <input type="radio" name="group-4" id="group-4-radio-2">
+                                <label for="group-4-radio-2">Я и мои друзья</label>
+
+                                <input type="radio" name="group-4" id="group-4-radio-3">
+                                <label for="group-4-radio-3">Только я</label>
+                            </fieldset>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="section-settings">
+                    <h4 class="section-settings__title"><i class="fa-solid fa-headset"></i>Помощь</h4>
+                    <div class="section-settings__container section-content">
+                        
+                        <div class="section-content__item">
+                            <p class="section-content__title"><i class="fa-solid fa-phone-volume"></i>Обратиться в поддержку</p>
+                                <span class="section-content__text"><a href="mailto:akcjdjs123456789@gmail.com">Я хочу написать в поддержку</a></span>
+                        </div>
+
+                        <div class="section-content__item">
+                            <div class="details-settings">
+                                <p class="details-settings__title section-content__title"><i class="fa-solid fa-ban"></i>Что делать, если мой аккаунт заблокировали?</p>
+                                <div class="details-settings__content">
+                                    <p>ваш аккаунт заблокирован из-за жалоб других пользователей или за непристойное поведение. Не переживайте, бан аккаунта продлится всего неделю</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-content__item">
+                            <div class="details-settings">
+                                <p class="details-settings__title section-content__title"><i class="fa-solid fa-triangle-exclamation"></i>Что делать если мне угрожают?</p>
+                                <div class="details-settings__content">
+                                    <p>Отправьте жалобу на лицо, которое вам угрожает, администрация проверит учетную запись злоумышленника и при наличии доказательств угроз в ваш адрес администрация заблокирует учетную запись злоумышленника или, в крайнем случае, удалит ее</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-content__item">
+                            <div class="details-settings">
+                                <p class="details-settings__title section-content__title"><i class="fa-solid fa-person-circle-exclamation"></i>Что делать, если кто-то вошел в мой аккаунт?</p>
+                                <div class="details-settings__content">
+                                    <p>На вашу электронную почту приходят уведомления о том, что вы вошли в свою учетную запись с другого устройства, советуем сменить пароль от своей учетной записи, чтобы такая проблема больше не повторилась</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-content__item">
+                            <div class="details-settings">
+                                <p class="details-settings__title section-content__title"><i class="fa-solid fa-lock"></i>Что делать если я забыл свой пароль?</p>
+                                <div class="details-settings__content">
+                                    <p>Обратитесь в службу поддержки и напишите им, что забыли или потеряли пароль, также не забудьте ввести свое имя которое вы указывали в регистрации и желательно ссылку на ваш профиль</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
+
+
+
+
+                <!-- цвет -->
+                <!-- <div class="section-content__item">
+                    <p class="section-content__title">TITLE_ITEM</p>
+                    <div class="color-settings">
+                        <div class="color-settings__item" style="background-color: rgb(5,57,107);"></div>
+                        <div class="color-settings__item" style="background-color: rgb(56,149,131);"></div>
+                        <div class="color-settings__item" style="background-color: rgba(92,219,148);"></div>
+                        <div class="color-settings__item" style="background-color: rgb(26,0,97);"></div>
+                        <div class="color-settings__item" style="background-color: rgba(35,0,144);"></div>
+                        <div class="color-settings__item color-settings__item--active" style="background-color: rgba(19,131,212);"></div>
+                        <div class="color-settings__item" style="background-color: rgb(207,0,0);"></div>
+                        <div class="color-settings__item" style="background-color: rgba(230,0,29);"></div>
+                        <div class="color-settings__item" style="background-color: rgba(255,0,0);"></div>
+                        <div class="color-settings__item" style="background-color: rgb(113,0,207);"></div>
+                        <div class="color-settings__item" style="background-color: rgba(139,0,255);"></div>
+                        <div class="color-settings__item" style="background-color: rgba(164,54,255);"></div>
+                        <div class="color-settings__item" style="background-color: rgb(41,41,41);"></div>
+                        <div class="color-settings__item" style="background-color: rgba(56,56,56);"></div>
+                        <div class="color-settings__item" style="background-color: rgba(76,76,76);"></div>
+                    </div>
+                    <div class="create-color">
+                        <label for="create-color"><i class="fa-solid fa-palette"></i>Add color</label>
+                        <input type="color" name="" id="create-color">
+                    </div>
+                </div> -->
+
+                <!-- просто текст действие -->
+                <!-- <div class="section-content__item">
+                    <p class="section-content__title">TITLE_ITEM</p>
+                        <span class="section-content__text" id="">TEXT</span>
+                </div> -->
+
+
+                <!-- селект -->
+                <!-- <div class="section-content__item">
+                            <p class="section-content__title">TITLE_ITEM</p>
+                            <select class="select" name="" id="">
+                                <option value="">VAR_1</option>
+                                <option value="">VAR_2</option>
+                                <option value="">VAR_3</option>
+                                <option value="">VAR_4</option>
+                            </select>
+                        </div>
+
+                    один из вариантов radio
+                        <div class="section-content__item">
+                            <p class="section-content__title">TITLE_ITEM</p>
+                            <fieldset id="group" class="fieldset">
+                                <input checked type="radio" name="group" id="group-radio-1">
+                                <label for="group-radio-1">VAR_1</label>
+
+                                <input type="radio" name="group" id="group-radio-2">
+                                <label for="group-radio-2">VAR_2</label>
+
+                                <input type="radio" name="group" id="group-radio-3">
+                                <label for="group-radio-3">VAR_3</label>
+                            </fieldset>
+                        </div>
+
+
+                        выбирай все подряд checkbox
+                        <div class="section-content__item">
+                            <p class="section-content__title">TITLE_ITEM</p>
+                            <div class="checkbox-settings">
+                                <input id="checkbox-input" type="checkbox">
+                                <label for="checkbox-input">VAR_1</label>
+                                <input id="checkbox-input-2" type="checkbox">
+                                <label for="checkbox-input-2">VAR_2</label>
+                                <input id="checkbox-input-3" type="checkbox">
+                                <label for="checkbox-input-3">VAR_3</label>
+                            </div>
+                        </div>
+
+                        модно двиграть range
+
+                        <div class="section-content__item">
+                            <p class="section-content__title">TITLE_ITEM</p>
+                            <div class="range-settings">
+                                <span class="range-settings__start">0</span>
+                                <span class="range-settings__center">0.5</span>
+                                <span class="range-settings__end">1</span>
+                                <input class="range-settings__input" type="range" value="15" max="50" min="10" name="" id="range">
+                            </div>
+                        </div>
+
+
+
+                        поменять значение textarea
+                        <div class="section-content__item">
+                            <p class="section-content__title">TITLE_ITEM</p>
+                            <form class="textarea-settings" action="">
+                                <label for="textarea-settings">Change ifo</label>
+                                <textarea name="" id="textarea-settings" cols="30" rows="10"></textarea>
+                                <button type="submit">Apply</button>
+                            </form>
+
+                        </div>
+
+                        поменять значение text, password, email
+
+                        <div class="section-content__item">
+                            <p class="section-content__title">TITLE_ITEM</p>
+                            <form method="post" action="" class="input-text-settings">
+                                <div class="input-text-settings__item">
+                                    <label for="name">Enter text</label>
+                                    <input type="text" value="Admin" id="name">
+                                </div>
+                                <div class="input-text-settings__item">
+                                    <label for="name">Enter text</label>
+                                    <input type="text" value="Admin" id="name">
+                                </div>
+                                <div class="input-text-settings__item">
+                                    <label for="name">Enter text</label>
+                                    <input type="text" value="Admin" id="name">
+                                </div>
+                                <button class="input-text-settings__button" type="submit">Apply changes</button>
+                            </form>
+                        </div> -->
+            </div>
+        </main>
+    </div>
+</body>
+</html>

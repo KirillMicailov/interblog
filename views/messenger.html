@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <title>Messenger</title>
+    <script src="../public/js/messenger.js"></script>
+    <script src="https://kit.fontawesome.com/972ea9599a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper wrapper--messenger">
+
+        <!-- список переписк -->
+        <div class="popup-list-interlocutors">
+            <header class="popup-list-interlocutors__header">
+                <button class="popup-list-interlocutors__close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </header>
+            <div class="popup-list-interlocutors__list popup-list-interlocutors-list">
+                <div class="popup-list-interlocutors-list__item">
+                    <div class="popup-list-interlocutors-list__avatar">
+                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                    </div>
+                    <div class="popup-list-interlocutors-list__info">
+                        <p class="popup-list-interlocutors-list__name">Nickname</p>
+                        <p class="popup-list-interlocutors-list__condition">offline</p>
+                    </div>
+                </div>
+                <div class="popup-list-interlocutors-list__item">
+                    <div class="popup-list-interlocutors-list__avatar">
+                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                    </div>
+                    <div class="popup-list-interlocutors-list__info">
+                        <p class="popup-list-interlocutors-list__name">Nickname</p>
+                        <p class="popup-list-interlocutors-list__condition">offline</p>
+                    </div>
+                </div>
+                <div class="popup-list-interlocutors-list__item">
+                    <div class="popup-list-interlocutors-list__avatar">
+                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                    </div>
+                    <div class="popup-list-interlocutors-list__info">
+                        <p class="popup-list-interlocutors-list__name">Nickname</p>
+                        <p class="popup-list-interlocutors-list__condition">offline</p>
+                    </div>
+                </div>
+                <div class="popup-list-interlocutors-list__item">
+                    <div class="popup-list-interlocutors-list__avatar">
+                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                    </div>
+                    <div class="popup-list-interlocutors-list__info">
+                        <p class="popup-list-interlocutors-list__name">Nickname</p>
+                        <p class="popup-list-interlocutors-list__condition">offline</p>
+                    </div>
+                </div>
+                <div class="popup-list-interlocutors-list__item">
+                    <div class="popup-list-interlocutors-list__avatar">
+                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                    </div>
+                    <div class="popup-list-interlocutors-list__info">
+                        <p class="popup-list-interlocutors-list__name">Nickname</p>
+                        <p class="popup-list-interlocutors-list__condition">offline</p>
+                    </div>
+                </div>
+                <div class="popup-list-interlocutors-list__item">
+                    <div class="popup-list-interlocutors-list__avatar">
+                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                    </div>
+                    <div class="popup-list-interlocutors-list__info">
+                        <p class="popup-list-interlocutors-list__name">Nickname</p>
+                        <p class="popup-list-interlocutors-list__condition">offline</p>
+                    </div>
+                </div>
+                <div class="popup-list-interlocutors-list__item">
+                    <div class="popup-list-interlocutors-list__avatar">
+                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                    </div>
+                    <div class="popup-list-interlocutors-list__info">
+                        <p class="popup-list-interlocutors-list__name">Nickname</p>
+                        <p class="popup-list-interlocutors-list__condition">offline</p>
+                    </div>
+                </div>
+                <div class="popup-list-interlocutors-list__item">
+                    <div class="popup-list-interlocutors-list__avatar">
+                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                    </div>
+                    <div class="popup-list-interlocutors-list__info">
+                        <p class="popup-list-interlocutors-list__name">Nickname</p>
+                        <p class="popup-list-interlocutors-list__condition">offline</p>
+                    </div>
+                </div>
+                <div class="popup-list-interlocutors-list__item">
+                    <div class="popup-list-interlocutors-list__avatar">
+                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                    </div>
+                    <div class="popup-list-interlocutors-list__info">
+                        <p class="popup-list-interlocutors-list__name">Nickname</p>
+                        <p class="popup-list-interlocutors-list__condition">offline</p>
+                    </div>
+                </div>
+                <div class="popup-list-interlocutors-list__item">
+                    <div class="popup-list-interlocutors-list__avatar">
+                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                    </div>
+                    <div class="popup-list-interlocutors-list__info">
+                        <p class="popup-list-interlocutors-list__name">Nickname</p>
+                        <p class="popup-list-interlocutors-list__condition">offline</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="header__container">
+                <a href="" class="header__logo">InterBlog</a>
+                <div class="account">
+                    <div class="account__avatar-container">
+                        <img class="account__avatar" src="../public/img/user.png" alt="">
+                    </div>
+                    <p class="account__name">Имя</p>
+                    <i class="account__arrow fa-solid fa-chevron-down"></i>
+                    <a href="./authorization.html" class="account__popup">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Выйти</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <header class="header-mobile">
+            <div class="header__container header-mobile__container">
+                <a href="" class="header__logo">InterBlog</a>
+                <div class="header-mobile__account-searchBtn">
+                    <div class="account account-mobile">
+                        <div class="account__avatar-container account__avatar--mobile">
+                            <img class="account__avatar" src="../public/img/user.png" alt="">
+                        </div>
+                        <i class="account__arrow fa-solid fa-chevron-down"></i>
+                        <a href="./authorization.html" class="account__popup account__popup-mobile">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Выйти</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <nav class="navbar">
+            <div class="navbar__item navbar__item--menu"><i class="menu-btn fa-solid fa-bars"></i></div>
+            <a href="index.html" class="navbar__item"><i class="fa-solid fa-house"></i><p class="navbar__text-link">Главная</p></a>
+            <a href="profile.html" class="navbar__item"><i class="fa-solid fa-user"></i><p class="navbar__text-link">Профиль</p></a>
+            <a href="settings.html" class="navbar__item"><i class="fa-solid fa-gear"></i><p class="navbar__text-link">Настройки</p></a>
+            <a href="messenger.html" class="navbar__item navbar__item--active"><i class="fa-solid fa-comments"></i><p class="navbar__text-link">Сообщения</p></a>
+        </nav>
+        <nav class="navbar-mobile">
+            <div class="navbar-mobile__container">
+            <a href="index.html" class="navbar-mobile__item"><i class="fa-solid fa-house"></i><p class="navbar-mobile__text-link">Главная</p></a>
+            <a href="profile.html" class="navbar-mobile__item"><i class="fa-solid fa-user"></i><p class="navbar-mobile__text-link">Профиль</p></a>
+            <a href="settings.html" class="navbar-mobile__item"><i class="fa-solid fa-gear"></i><p class="navbar-mobile__text-link">Настройки</p></a>
+            <a href="messenger.html" class="navbar-mobile__item navbar-mobile__item--active"><i class="fa-solid fa-comments"></i><p class="navbar-mobile__text-link">Сообщения</p></a>
+            </div>
+        </nav>
+
+        <main class="main main--messenger">
+            <div class="messenger">
+
+                <div class="dialogue">
+                    <header class="dialogue-header">
+                        <div href="" class="dialogue-header__interlocutor interlocutor-messenger">
+                            <div class="interlocutor-messenger__avatar">
+                                <a href="" class="interlocutor-messenger__avatar-img">
+                                    <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="interlocutor-messenger__info">
+                                <p class="interlocutor-messenger__name">Андрей</p>
+                                <p class="interlocutor-messenger__condition">offline</p>
+                            </div>
+                        </div>
+
+                        <div class="dialogue-header__actions interlocutor-actions">
+                            <div class="interlocutor-actions__item">
+                                <button class="interlocutor-actions__menu-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                                <div class="interlocutor-actions__drop-out-menu interlocutor-drop-out-menu">
+                                    <div class="interlocutor-drop-out-menu__item">
+                                        <i class="fa-solid fa-circle-user"></i>
+                                        <span>Перейти в профиль</span>
+                                    </div>
+                                    <div class="interlocutor-drop-out-menu__item">
+                                        <i class="fa-solid fa-user-plus"></i>
+                                        <span>Добавить в друзья</span>
+                                    </div>
+                                    <div class="interlocutor-drop-out-menu__item interlocutor-drop-out-menu__item--complain">
+                                        <i class="fa-solid fa-circle-exclamation"></i>
+                                        <span>Пожаловаться</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="interlocutor-actions__item interlocutor-actions-list-btn"><i class="fa-solid fa-list"></i></button>
+                        </div>
+                    </header>
+
+                    <div class="dialogue-content">
+
+                        <div class="dialogue-content__item  message-interlocutor">
+                            <div class="message">
+                                <div class="message__author">
+                                    <a href="" class="message__avatar message__avatar--interlocutor">
+                                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="message__container">
+                                    <div class="message-content">
+                                        <header class="message-content__info">
+                                            <p class="message-content__name message-content__name--interlocutor">Андре</p>
+                                            <time class="message-content__time">12:00</time>
+                                        </header>
+                                        <div class="message-content__text">
+                                            Привет 🤚
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dialogue-content__item  message-your">
+                            <div class="message">
+                                <div class="message__author">
+                                    <a href="" class="message__avatar">
+                                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="message__container">
+                                    <div class="message-content">
+                                        <header class="message-content__info">
+                                            <p class="message-content__name">Имя</p>
+                                            <time class="message-content__time">12:00</time>
+                                        </header>
+
+                                        <div class="message-content__text">
+                                            Привет🤚
+                                        </div>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dialogue-content__item  message-interlocutor">
+                            <div class="message">
+                                <div class="message__author">
+                                    <a href="" class="message__avatar message__avatar--interlocutor">
+                                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="message__container">
+                                    <div class="message-content">
+                                        <header class="message-content__info">
+                                            <p class="message-content__name message-content__name--interlocutor">Андрей</p>
+                                            <time class="message-content__time">12:00</time>
+                                        </header>
+                                        <div class="message-content__text">
+                                            Это просто текст рыба не имеет смысла
+                                        </div>
+
+                                        <!-- файл простой -->
+                                        <a href="../public/test.docx" target="_blank" class="message-content__file message-content-file">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                            <div class="message-content-file__info">
+                                                <p class="message-content-file__name">Имя файла.docx</p>
+                                                <p class="message-content-file__size">12 kb</p>
+                                            </div>
+                                        </a>
+
+                                        <!-- файл pdf -->
+
+                                        <a href="../certificate.pdf" target="_blank" class="message-content__file message-content-file">
+                                            <i class="fa-solid fa-file-pdf"></i>
+                                            <div class="message-content-file__info">
+                                                <p class="message-content-file__name">Имя файла.pdf</p>
+                                                <p class="message-content-file__size">12 kb</p>
+                                            </div>
+                                        </a>
+
+
+                                        <!-- музыка сообщение -->
+                                        <div class="message-content__file message-content-file message-content-file__audio">
+                                            <audio src="../audio/C418 - cat (dizer.net).mp3" preload="metadata" controls></audio>
+                                        </div>
+
+                                        <!-- видео сообщени -->
+                                        <div class="message-content__file message-content-file__video">
+                                            <video controls src="../videoplayback.mp4"></video>
+                                        </div>
+
+                                        <!-- изображение сообщение -->
+                                        <a target="_blank" href="../public/img/photo-hight.jpg" class="message-content-image">
+                                            <img src="../public/img/photo-hight.jpg" alt="">
+                                        </a>
+
+                                        <a target="_blank" href="../public/img/jojo-SBR.webp" class="message-content-image">
+                                            <img src="../public/img/jojo-SBR.webp" alt="">
+                                        </a>
+
+                                        <a target="_blank" href="../public/img/photo-hight-2.jpg" class="message-content-image">
+                                            <img src="../public/img/photo-hight-2.jpg" alt="">
+                                        </a>
+
+
+                                        
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dialogue-content__item  message-your">
+                            <div class="message">
+                                <div class="message__author">
+                                    <a href="" class="message__avatar">
+                                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="message__container">
+                                    <div class="message-content">
+                                        <header class="message-content__info">
+                                            <p class="message-content__name">Имя</p>
+                                            <time class="message-content__time">12:00</time>
+                                        </header>
+
+                                        <div class="message-content__text">
+                                            Отлично
+                                        </div>
+
+                                        <!-- видео сообщени -->
+                                        <div class="message-content__file message-content-file__video">
+                                            <video controls src="../videoplayback.mp4" preload="metadata"></video>
+                                        </div>
+
+                                        <a href="../certificate.pdf" target="_blank" class="message-content__file message-content-file">
+                                            <i class="fa-solid fa-file-pdf"></i>
+                                            <div class="message-content-file__info">
+                                                <p class="message-content-file__name">Имя файла.pdf</p>
+                                                <p class="message-content-file__size">12 kb</p>
+                                            </div>
+                                        </a>
+
+
+                                        <a href="../public/test.docx" target="_blank" class="message-content__file message-content-file">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                            <div class="message-content-file__info">
+                                                <p class="message-content-file__name">Имя файла.docx</p>
+                                                <p class="message-content-file__size">12 kb</p>
+                                            </div>
+                                        </a>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="dialogue-content__item  message-interlocutor">
+                            <div class="message">
+                                <div class="message__author">
+                                    <a href="" class="message__avatar message__avatar--interlocutor">
+                                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="message__container">
+                                    <div class="message-content">
+                                        <header class="message-content__info">
+                                            <p class="message-content__name message-content__name--interlocutor">Андрей</p>
+                                            <time class="message-content__time">12:00</time>
+                                        </header>
+                                        <div class="message-content__text">
+                                            🤣🤣🤣🤣
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dialogue-content__item  message-interlocutor">
+                            <div class="message">
+                                <div class="message__author">
+                                    <a href="" class="message__avatar message__avatar--interlocutor">
+                                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="message__container">
+                                    <div class="message-content">
+                                        <header class="message-content__info">
+                                            <p class="message-content__name message-content__name--interlocutor">Андрей</p>
+                                            <time class="message-content__time">12:00</time>
+                                        </header>
+                                        <div class="message-content__text">
+                                            Это снова текст рыба, да, я люблю текст рыбу
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="dialogue-content__item  message-interlocutor">
+                            <div class="message">
+                                <div class="message__author">
+                                    <a href="" class="message__avatar message__avatar--interlocutor">
+                                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="message__container">
+                                    <div class="message-content">
+                                        <header class="message-content__info">
+                                            <p class="message-content__name message-content__name--interlocutor">Андрей</p>
+                                            <time class="message-content__time">12:00</time>
+                                        </header>
+                                        <div class="message-content__text">
+                                            Ладно, давай встретимся в 8
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dialogue-content__item  message-your">
+                            <div class="message">
+                                <div class="message__author">
+                                    <a href="" class="message__avatar">
+                                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="message__container">
+                                    <div class="message-content">
+                                        <header class="message-content__info">
+                                            <p class="message-content__name">Имя</p>
+                                            <time class="message-content__time">12:00</time>
+                                        </header>
+                                        <div class="message-content__text">
+                                            Давай 👌
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <footer class="dialogue-footer">
+                        <form class="form-dialogue" action="">
+                            <textarea class="form-dialogue__text" name=""></textarea>
+                            <input multiple="multiple" id="form-dialogue-file" type="file">
+                            <label class="form-dialogue__file" for="form-dialogue-file"><i class="fa-solid fa-paperclip"></i></label>
+                            <button class="form-dialogue__send" type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+
+                        <div class="selected-files-message">
+                            
+
+                        </div>
+                    </footer>
+
+                </div>
+                <div class="messenger-sidebar">
+                    <header class="messenger-sidebar__header sidebar-header">
+                        <button class="sidebar-header__menu">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </header>
+                    <div class="messenger-sidebar__list list-messages">
+                        <div class="list-messages__item sidebar-interlocutor sidebar-interlocutor--active">
+                            <div class="sidebar-interlocutor__avatar">
+                                <img src="../public/img/photo-normal.jpg" alt="">
+                            </div>
+                            <div class="sidebar-interlocutor__info">
+                                <p class="sidebar-interlocutor__name">Андрей</p>
+                                <p class="sidebar-interlocutor__condition">offline</p>
+                            </div>
+                        </div>
+                        <div class="list-messages__item sidebar-interlocutor">
+                            <div class="sidebar-interlocutor__avatar">
+                                <img src="../public/img/jojo-SBR.webp" alt="">
+                            </div>
+                            <div class="sidebar-interlocutor__info">
+                                <p class="sidebar-interlocutor__name">Витя</p>
+                                <p class="sidebar-interlocutor__condition">offline</p>
+                            </div>
+                        </div>
+
+                        <div class="list-messages__item sidebar-interlocutor">
+                            <div class="sidebar-interlocutor__avatar">
+                                <img src="../public/img/photo-width-4.jfif" alt="">
+                            </div>
+                            <div class="sidebar-interlocutor__info">
+                                <p class="sidebar-interlocutor__name">Никита</p>
+                                <p class="sidebar-interlocutor__condition">offline</p>
+                            </div>
+                        </div>
+
+                        <div class="list-messages__item sidebar-interlocutor">
+                            <div class="sidebar-interlocutor__avatar">
+                                <img src="../public/img/avatar-1.png" alt="">
+                            </div>
+                            <div class="sidebar-interlocutor__info">
+                                <p class="sidebar-interlocutor__name">Алина</p>
+                                <p class="sidebar-interlocutor__condition">offline</p>
+                            </div>
+                        </div>
+
+                        <div class="list-messages__item sidebar-interlocutor">
+                            <div class="sidebar-interlocutor__avatar">
+                                <img src="../public/img/photo-hight-3.webp" alt="">
+                            </div>
+                            <div class="sidebar-interlocutor__info">
+                                <p class="sidebar-interlocutor__name">Даша</p>
+                                <p class="sidebar-interlocutor__condition">offline</p>
+                            </div>
+                        </div>
+
+                        <div class="list-messages__item sidebar-interlocutor">
+                            <div class="sidebar-interlocutor__avatar">
+                                <img src="../public/img/user.png" alt="">
+                            </div>
+                            <div class="sidebar-interlocutor__info">
+                                <p class="sidebar-interlocutor__name">Рома</p>
+                                <p class="sidebar-interlocutor__condition">offline</p>
+                            </div>
+                        </div>
+                        <div class="list-messages__item sidebar-interlocutor">
+                            <div class="sidebar-interlocutor__avatar">
+                                <img src="../public/img/photo-hight-2.jpg" alt="">
+                            </div>
+                            <div class="sidebar-interlocutor__info">
+                                <p class="sidebar-interlocutor__name">Гриша</p>
+                                <p class="sidebar-interlocutor__condition">offline</p>
+                            </div>
+                        </div>
+
+                        <div class="list-messages__item sidebar-interlocutor">
+                            <div class="sidebar-interlocutor__avatar">
+                                <img src="../public/img/photo-width.jpg" alt="">
+                            </div>
+                            <div class="sidebar-interlocutor__info">
+                                <p class="sidebar-interlocutor__name">Данил</p>
+                                <p class="sidebar-interlocutor__condition">offline</p>
+                            </div>
+                        </div>
+
+                        <div class="list-messages__item sidebar-interlocutor">
+                            <div class="sidebar-interlocutor__avatar">
+                                <img src="../public/img/user.png" alt="">
+                            </div>
+                            <div class="sidebar-interlocutor__info">
+                                <p class="sidebar-interlocutor__name">Кирилл</p>
+                                <p class="sidebar-interlocutor__condition">offline</p>
+                            </div>
+                        </div>
+
+                        <div class="list-messages__item sidebar-interlocutor">
+                            <div class="sidebar-interlocutor__avatar">
+                                <img src="../public/img/photo-width-2.jpg" alt="">
+                            </div>
+                            <div class="sidebar-interlocutor__info">
+                                <p class="sidebar-interlocutor__name">Динис</p>
+                                <p class="sidebar-interlocutor__condition">offline</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+    
+</body>
+</html>

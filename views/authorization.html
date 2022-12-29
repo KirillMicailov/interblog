@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <link rel="stylesheet" href="../public/icons/fontawesome-free-6.2.0-web/css/all.min.css">
+    <link rel="icon" href="../public/img/avatar-1.png" type="image/x-icon">
+    <title>Авторизация</title>
+    <script src="../public/js/authorization.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container ">
+            <h2 class="title-form">Войти</h2>
+            <form class="form-authorization" method="post" action="">
+                <input name="name" class="form-authorization__input" required placeholder="Имя" type="text">
+                <input name="password" class="form-authorization__input" required placeholder="Пароль" type="password">
+                <div class="checkbox">
+                    <input name="check" id="checkbox-input" checked type="checkbox">
+                    <label for="checkbox-input">Запомнить меня на этом сайте</label>
+                </div>
+                <p class="form-authorization__error"></p>
+                <button class="form-authorization__button-auth" type="submit">Войти</button>
+                <a class="form-authorization__reg-link" href="./registration.html">Нету аккаунта? Зарегестрируйся</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

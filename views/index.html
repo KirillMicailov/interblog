@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <title>Main</title>
+    <script src="../public/js/index.js"></script>
+    <script src="https://kit.fontawesome.com/972ea9599a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- <div class="wrapper__background"></div> -->
+        <header class="header">
+            <div class="header__container">
+                <a href="" class="header__logo">InterBlog</a>
+                <form method="get" class="header__form-search form-search">
+                    <input class="form-search__input-text" placeholder="Поиск..." type="search">
+                    <button class="form-search__submit-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <div class="account">
+                    <div class="account__avatar-container">
+                        <img class="account__avatar" src="../public/img/user.png" alt="">
+                    </div>
+                    <p class="account__name">Имя</p>
+                    <i class="account__arrow fa-solid fa-chevron-down"></i>
+                    <a href="./authorization.html" class="account__popup">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Выйти</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <header class="header-mobile">
+            <div class="header__container header-mobile__container">
+                <a href="" class="header__logo">InterBlog</a>
+                <div class="header-mobile__account-searchBtn">
+                    <form class="form-search-mobile" action="" method="get">
+                        <input class="form-search-mobile__text" type="search">
+                    </form>
+                    <i class="header-mobile__search-btn fa-solid fa-magnifying-glass"></i>
+                    <div class="account account-mobile">
+                        <div class="account__avatar-container account__avatar--mobile">
+                            <img class="account__avatar" src="../public/img/user.png" alt="">
+                        </div>
+                        <i class="account__arrow fa-solid fa-chevron-down"></i>
+                        <a href="./authorization.html" class="account__popup account__popup-mobile">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Выйти</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </header>
+        <nav class="navbar">
+            <div class="navbar__item navbar__item--menu"><i class="menu-btn fa-solid fa-bars"></i></div>
+            <a href="index.html" class="navbar__item navbar__item--active"><i class="fa-solid fa-house"></i><p class="navbar__text-link">Главная</p></a>
+            <a href="profile.html" class="navbar__item"><i class="fa-solid fa-user"></i><p class="navbar__text-link">Профиль</p></a>
+            <a href="settings.html" class="navbar__item"><i class="fa-solid fa-gear"></i><p class="navbar__text-link">Настройки</p></a>
+            <a href="messenger.html" class="navbar__item"><i class="fa-solid fa-comments"></i><p class="navbar__text-link">Сообщения</p></a>
+        </nav>
+        <nav class="navbar-mobile">
+            <div class="navbar-mobile__container">
+            <a href="index.html" class="navbar-mobile__item navbar-mobile__item--active"><i class="fa-solid fa-house"></i><p class="navbar-mobile__text-link">Главная</p></a>
+            <a href="profile.html" class="navbar-mobile__item"><i class="fa-solid fa-user"></i><p class="navbar-mobile__text-link">Профиль</p></a>
+            <a href="settings.html" class="navbar-mobile__item"><i class="fa-solid fa-gear"></i><p class="navbar-mobile__text-link">Настройки</p></a>
+            <a href="messenger.html" class="navbar-mobile__item"><i class="fa-solid fa-comments"></i><p class="navbar-mobile__text-link">Сообщения</p></a>
+            </div>
+        </nav>
+
+        <!-- попап добавить ответ на комментарий -->
+
+        <div class="popup-container popup-container--answer-on-comment">
+            <form class="popup popup-answer-on-comment">
+                <header class="popup__header">
+                    <h4 class="popup__title">Ответить на комментарий</h4>
+                    <div class="popup__close-btn  close-btn close-btn-popup-gallery">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </header>
+                <div class="popup__content popup-create-post__content">
+                    <textarea placeholder="напишите что-нибудь..." class="popup__textarea popup-textarea-add-answer-on-comment"></textarea>
+                    <div class="popup__selected-files selected-files selected-files-answer-on-comment">
+                    
+
+                    </div>
+                </div>
+                <footer class="popup__footer popup-footer popup-create-post__footer">
+                    <div class="popup-footer__btn-files"> 
+                        <label class="popup__btn-image popup-footer__item" for="popup__input-image-answer-on-comment"><i class="fa-solid fa-paperclip"></i></label>
+                        <input multiple="multiple" id="popup__input-image-answer-on-comment" class="popup__input-image btn-change-image popup-create-post__input-file" type="file">
+                    </div>
+                    <button class="popup-create-post__publish-btn" type="submit"><i class="fa-solid fa-plus"></i>Ответить</button>
+                </footer>
+            </form>
+        </div>
+
+        <!-- попап добавить комментарий -->
+        <div class="popup-container popup-container--add-comment">
+            <form class="popup popup-add-comment">
+                <header class="popup__header">
+                    <h4 class="popup__title">Добавить комментарий</h4>
+                    <div class="popup__close-btn  close-btn close-btn-popup-gallery">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </header>
+                <div class="popup__content popup-create-post__content">
+                    <textarea placeholder="напишите что-нибудь" class="popup__textarea popup-textarea-comment"></textarea>
+                    <div class="popup__selected-files selected-files selected-files-add-comment">
+                    
+
+                    </div>
+                </div>
+                <footer class="popup__footer popup-footer popup-create-post__footer">
+                    <div class="popup-footer__btn-files"> 
+                        <label class="popup__btn-image popup-footer__item" for="popup__input-add-comment"><i class="fa-solid fa-paperclip"></i></label>
+                        <input multiple="multiple" id="popup__input-add-comment" class="popup__input-image btn-change-image popup-create-post__input-file" type="file">
+                    </div>
+                    <button class="popup-create-post__publish-btn" type="submit"><i class="fa-solid fa-plus"></i>Добавить комментарий</button>
+                </footer>
+            </form>
+        </div>
+
+        <main class="main">
+            <div class="main__container">
+
+                <article class="post">
+                    <header class="post-header">
+                        <a class="post-account" href="/">
+                            <div class="post-account__avatar">
+                                <img src="../public/img/user.png" alt="">
+                            </div>
+                            <div class="post-account__info">
+                                <p class="post-account__name">Имя</p>
+                                <time class="post-account__data">12:00</time>
+                            </div>
+                        </a>
+                        <div class="post-header__menu post-header-menu">
+                            <button class="post-header-menu__btn post-popup-button">
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                            <div class="post-header-menu__popup-menu post-header-menu-popup-menu post-popup-menu">
+                                <div class="post-header-menu-popup-menu__item"><i class="fa-solid fa-bookmark"></i><span>Сохранить</span></div>
+                                <div class="post-header-menu-popup-menu__item post-header-menu-popup-menu__item--complain"><i class="fa-solid fa-circle-exclamation"></i><span>Пожаловаться</span></div>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="post-content">
+
+                        <!-- текст пост -->
+                        <div class="post-content__text">
+                            <p>Это просто текст рыба для поста</p>
+                        </div>
+
+                        <!-- изображение пост -->
+                        <a target="_blank" href="../public/img/photo-hight-2.jpg" class="post-content__image">
+                            <img src="../public/img/photo-hight-2.jpg" alt="">
+                        </a>
+
+                        <a target="_blank" href="../public/img/bg.jpg" class="post-content__image">
+                            <img src="../public/img/bg.jpg" alt="">
+                        </a>
+
+                        <a target="_blank" href="../public/img/photo.webp" class="post-content__image">
+                            <img src="../public/img/photo.webp" alt="">
+                        </a>
+
+                        <!-- файл пост -->
+                        <a target="_blank" href="../public/test.docx" class="post-content-file">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <div class="post-content-file__info">
+                                <p class="post-content-file__name">Имя файла.docx</p>
+                                <p class="post-content-file__size">12 kb</p>
+                            </div>
+                        </a>
+
+                    <!-- аудио пост -->
+                        <div class="post-content-audio">
+                            <audio controls preload="metadata" src="../audio/C418 - cat (dizer.net).mp3"></audio>
+                        </div>
+
+                    <!-- видео пост -->
+                        <div class="post-content-video">
+                            <video controls preload="metadata" src="../videoplayback.mp4"></video>
+                        </div>
+                    </div>
+
+                    <footer class="post-footer">
+                        <div class="post-actions">
+                            <button class="post-actions__item like"><i class="fa-solid fa-thumbs-up"></i><span class="post-actions__number">12</span></button>
+                            <button class="post-actions__item dislike"><i class="fa-solid fa-thumbs-down"></i><span class="post-actions__number">12</span></button>
+                            <button class="post-actions__item post-actions-comments"><i class="fa-solid fa-message"></i><span class="post-actions__number">12</span></button>
+                        </div>
+                    </footer>
+
+                    <section class="post-comments">
+
+                        <button class="post-comment__add-comment btn-add-comment popup-activator"><i class="fa-solid fa-plus"></i> Добавить свой комментарий</button>
+                        <h5 class="post-comments__title">12 Комментариев</h5>
+                        <div class="post-comments__container">
+
+                            <div class="post-comments__item post-comment">
+
+                                <header class="post-comment__header post-comment-header">
+                                    <a class="post-comment-header__account" href="/">
+                                        <div class="post-comment-header__avatar">
+                                            <img src="../public/img/user.png" alt="">
+                                        </div>
+                                        <div class="post-comment-header__info">
+                                            <p class="post-comment-header__name">Имя</p>
+                                            <time class="post-comment-header__data">12:00</time>
+                                        </div>
+                                    </a>
+                                    <div class="post-comment-header__menu post-comment-header-menu">
+                                        <button class="post-comment-header-menu__btn post-popup-button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="post-comment-header-menu__popup post-comment-header-menu-popup post-popup-menu">
+                                            <div class="post-comment-header-menu-popup__item post-comment-header-menu-popup__item--complain">
+                                                <i class="fa-solid fa-circle-exclamation"></i>
+                                                <span>Пожаловаться</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </header>
+                                <div class="post-comment__content post-comment-content">
+                                    <p class="post-comment-content__text">Это просто текст рыба для комментария</p>
+
+                                    <a target="_blank" href="../public/test.docx" class="post-content-file">
+                                        <i class="fa-solid fa-file-lines"></i>
+                                        <div class="post-content-file__info">
+                                            <p class="post-content-file__name">Имя файла.docx</p>
+                                            <p class="post-content-file__size">12 kb</p>
+                                        </div>
+                                    </a>
+
+
+                                    <a target="_blank" href="../public/img/jojo-SBR.webp" class="post-content__image">
+                                        <img src="../public/img/jojo-SBR.webp" alt="">
+                                    </a>
+            
+
+                                    <div class="post-content-video">
+                                        <video controls preload="metadata" src="../videoplayback.mp4"></video>
+                                    </div>
+
+                                </div>
+                                <footer class="post-comment__footer post-comment-footer">
+                                    <div class="post-comment-footer__actions post-comment-footer-actions">
+                                        <button class="post-comment-footer-actions__item"><i class="fa-solid fa-thumbs-up"></i>12</button>
+                                        <button class="post-comment-footer-actions__item"><i class="fa-solid fa-thumbs-down"></i>12</button>
+                                        <button class="post-comment-footer-actions__item"><i class="fa-solid fa-message"></i>12</button>
+                                    </div>
+                                    <div class="post-comment-footer__action-answer popup-activator btn-answer-on-comment">Ответить</div>
+                                </footer>
+
+                                <div class="post-comment__answers post-comments-answers post-comments-answers--open">
+
+                                    <div class="post-comments-answers__item post-comments-answers-item">
+                                        <header class="post-comments-answers-item__header post-comments-answers-item-header">
+
+                                            <a class="post-comments-answers-item-header__account" href="/">
+                                                <div class="post-comments-answers-item-header__avatar">
+                                                    <img src="../public/img/user.png" alt="">
+                                                </div>
+                                                <div class="post-comments-answers-item-header__info">
+                                                    <p class="post-comments-answers-item-header__name">Имя</p>
+                                                    <time class="post-comments-answers-item-header__data">12:00</time>
+                                                </div>
+                                            </a>
+                                            <div class="post-comments-answers-item-header__menu post-comments-answers-item-header-menu">
+                                                <button class="post-comments-answers-item-header-menu__btn post-popup-button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                                                <div class="post-comments-answers-item-header-menu__popup post-comments-answers-item-header-menu-popup post-popup-menu">
+                                                    <div class="post-comments-answers-item-header-menu-popup__item post-comments-answers-item-header-menu-popup__item--complain">
+                                                        <i class="fa-solid fa-circle-exclamation"></i>
+                                                        <span>Пожаловаться</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <div class="post-comments-answers-item__content post-comment-answers-item-content">
+                                            <p class="post-comment-answers-item-content__text">текст рыба для ответа для комментария</p>
+
+                                            <a target="_blank" href="../public/test.docx" class="post-content-file">
+                                                <i class="fa-solid fa-file-lines"></i>
+                                                <div class="post-content-file__info">
+                                                    <p class="post-content-file__name">Имя файла.docx</p>
+                                                    <p class="post-content-file__size">12 kb</p>
+                                                </div>
+                                            </a>
+
+                                            <a target="_blank" href="../public/img/background-chat-vk-68 (1).jpg" class="post-content__image">
+                                                <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                                            </a>
+
+                                            <div class="post-content-video">
+                                                <video controls preload="metadata" src="../videoplayback.mp4"></video>
+                                            </div>
+
+                                        </div>
+                                        <footer class="post-comments-answers-item__footer post-comments-answers-item-footer">
+                                            <div class="post-comments-answers-item-footer__actions post-comments-answers-item-footer-actions">
+                                                <button class="post-comments-answers-item-footer-actions__item"><i class="fa-solid fa-thumbs-up"></i>12</button>
+                                                <button class="post-comments-answers-item-footer-actions__item"><i class="fa-solid fa-thumbs-down"></i>12</button>
+                                            </div>
+                                            <div class="post-comments-answers-item-footer__action-answer popup-activator btn-answer-on-comment">Ответить</div>
+                                        </footer>
+                                    </div>
+
+                                    
+                                </div>
+
+                            </div>
+
+                            <div class="post-comments__item post-comment">
+
+                                <header class="post-comment__header post-comment-header">
+                                    <a class="post-comment-header__account" href="/">
+                                        <div class="post-comment-header__avatar">
+                                            <img src="../public/img/user.png" alt="">
+                                        </div>
+                                        <div class="post-comment-header__info">
+                                            <p class="post-comment-header__name">Имя</p>
+                                            <time class="post-comment-header__data">12:00</time>
+                                        </div>
+                                    </a>
+                                    <div class="post-comment-header__menu post-comment-header-menu">
+                                        <button class="post-comment-header-menu__btn post-popup-button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                                        <div class="post-comment-header-menu__popup post-comment-header-menu-popup post-popup-menu">
+                                            <div class="post-comment-header-menu-popup__item post-comment-header-menu-popup__item--complain">
+                                                <i class="fa-solid fa-circle-exclamation"></i>
+                                                <span>Пожаловаться</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </header>
+                                <div class="post-comment__content post-comment-content">
+                                    <p class="post-comment-content__text">Это еще один текст рыба</p>
+
+                                    <a target="_blank" href="../public/test.docx" class="post-content-file">
+                                        <i class="fa-solid fa-file-lines"></i>
+                                        <div class="post-content-file__info">
+                                            <p class="post-content-file__name">Имя файла.docx</p>
+                                            <p class="post-content-file__size">12 kb</p>
+                                        </div>
+                                    </a>
+
+
+                                    <a target="_blank" href="../public/img/background-chat-vk-68 (1).jpg" class="post-content__image">
+                                        <img src="../public/img/background-chat-vk-68 (1).jpg" alt="">
+                                    </a>
+
+                                    <div class="post-content-video">
+                                        <video controls preload="metadata" src="../videoplayback.mp4"></video>
+                                    </div>
+
+                                </div>
+                                <footer class="post-comment__footer post-comment-footer">
+                                    <div class="post-comment-footer__actions post-comment-footer-actions">
+                                        <button class="post-comment-footer-actions__item"><i class="fa-solid fa-thumbs-up"></i>12</button>
+                                        <button class="post-comment-footer-actions__item"><i class="fa-solid fa-thumbs-down"></i>12</button>
+                                        <button class="post-comment-footer-actions__item"><i class="fa-solid fa-message"></i>12</button>
+                                    </div>
+                                    <div class="post-comment-footer__action-answer popup-activator btn-answer-on-comment">Ответить</div>
+                                </footer>
+
+                                <div class="post-comment__answers post-comments-answers">
+
+                                    <div class="post-comments-answers__item post-comments-answers-item">
+                                        <header class="post-comments-answers-item__header post-comments-answers-item-header">
+
+                                            <a class="post-comments-answers-item-header__account" href="/">
+                                                <div class="post-comments-answers-item-header__avatar">
+                                                    <img src="../public/img/user.png" alt="">
+                                                </div>
+                                                <div class="post-comments-answers-item-header__info">
+                                                    <p class="post-comments-answers-item-header__name">Имя</p>
+                                                    <time class="post-comments-answers-item-header__data">12:00</time>
+                                                </div>
+                                            </a>
+                                            <div class="post-comments-answers-item-header__menu post-comments-answers-item-header-menu">
+                                                <button class="post-comments-answers-item-header-menu__btn post-popup-button"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                                                <div class="post-comments-answers-item-header-menu__popup post-comments-answers-item-header-menu-popup post-popup-menu">
+                                                    <div class="post-comments-answers-item-header-menu-popup__item post-comments-answers-item-header-menu-popup__item--complain">
+                                                        <i class="fa-solid fa-circle-exclamation"></i>
+                                                        <span>Пожаловаться</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </header>
+                                        <div class="post-comments-answers-item__content post-comment-answers-item-content">
+                                            <p class="post-comment-answers-item-content__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, velit dolore? Dolorum illo eaque nesciunt neque similique est, adipisci cum! Blanditiis, sint praesentium? Quisquam ducimus voluptates, sequi sit beatae ex.</p>
+
+                                            <div class="post-content-file">
+                                                <i class="fa-solid fa-file-lines"></i>
+                                                <div class="post-content-file__info">
+                                                    <p class="post-content-file__name">Имя файла.docx</p>
+                                                    <p class="post-content-file__size">12 kb</p>
+                                                </div>
+                                            </div>
+
+                                            <a target="_blank" href="../public/img/photo-normal.jpg" class="post-content__image">
+                                                <img src="../public/img/photo-normal.jpg" alt="">
+                                            </a>
+
+                                            <div class="post-content-video">
+                                                <video controls preload="metadata" src="../videoplayback.mp4"></video>
+                                            </div>
+
+                                        </div>
+                                        <footer class="post-comments-answers-item__footer post-comments-answers-item-footer">
+                                            <div class="post-comments-answers-item-footer__actions post-comments-answers-item-footer-actions">
+                                                <button class="post-comments-answers-item-footer-actions__item"><i class="fa-solid fa-thumbs-up"></i>12</button>
+                                                <button class="post-comments-answers-item-footer-actions__item"><i class="fa-solid fa-thumbs-down"></i>12</button>
+                                            </div>
+                                            <div class="post-comments-answers-item-footer__action-answer popup-activator btn-answer-on-comment">Ответить</div>
+                                        </footer>
+                                    </div>
+
+                                    
+                                </div>
+
+                            </div>
+                        
+                        </div>
+                    </section>
+
+
+                </article>
+
+
+
+            
+                
+                
+                
+            </div>
+        </main>
+        <div class="btnTop"><i class="fa-solid fa-angle-up"></i></div>
+    </div>
+</body>
+</html>
